@@ -1,54 +1,144 @@
 <!doctype html>
 <html lang="fr">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Kevlux — Confidentialité</title>
-<meta name="description" content="Politique de confidentialité de Kevlux : aucune donnée collectée.">
-<style>
-:root{--bg:#f6f6f4;--fg:#1c1c1e;--muted:#5f5f63;--card:#fff;--line:#e3e3e0;--accent:#0a66d8}
-@media (prefers-color-scheme:dark){:root{--bg:#121214;--fg:#f2f2f2;--muted:#a0a0a6;--card:#1c1c1f;--line:#2c2c30;--accent:#4c9bff}}
-*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.6 -apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",Arial,sans-serif}
-main{max-width:720px;margin:0 auto;padding:40px 16px 64px}
-header{margin-bottom:28px}header a{color:var(--muted);text-decoration:none;font-size:15px}
-h1{font-size:34px;line-height:1.15;margin:8px 0 6px;letter-spacing:-.02em}
-h2{font-size:20px;margin:32px 0 8px}
-p,li{color:var(--fg)}.muted{color:var(--muted)}
-.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px 22px;margin:18px 0}
-a{color:var(--accent)}nav{display:flex;gap:18px;flex-wrap:wrap;margin-top:40px;font-size:15px}
-footer{margin-top:48px;color:var(--muted);font-size:14px;border-top:1px solid var(--line);padding-top:18px}
-.lang{float:right;font-size:15px}.lang a{margin-left:12px}.lang strong{margin-left:12px;color:var(--fg)}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title data-i18n="privacy.meta.title">Kevlux — Confidentialité</title>
+  <meta name="description" content="Politique de confidentialité de Kevlux : aucune donnée collectée." data-i18n-attr="content:privacy.meta.desc">
+  <meta name="theme-color" content="#07090d">
+  <link rel="icon" href="assets/img/kevlux-mark.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="stylesheet" href="assets/css/base/tokens.css">
+  <link rel="stylesheet" href="assets/css/base/base.css">
+  <link rel="stylesheet" href="assets/css/components/glass.css">
+  <link rel="stylesheet" href="assets/css/components/controls.css">
+  <link rel="stylesheet" href="assets/css/layout/site.css">
+  <link rel="stylesheet" href="assets/css/pages/doc.css">
+  <script src="assets/js/core/lang.js"></script>
+  <script src="assets/js/core/i18n.js" defer></script>
+  <script src="assets/js/ui/glass.js" defer></script>
+  <script src="assets/js/ui/reveal.js" defer></script>
+  <script src="assets/js/ui/toc.js" defer></script>
 </head>
-<body>
-<main>
-<header><a href="index.html">Kevlux</a><span class="lang"><strong>FR</strong><a href="en/privacy.html" hreflang="en" lang="en">EN</a><a href="es/privacidad.html" hreflang="es" lang="es">ES</a></span></header>
-<h1>Politique de confidentialité</h1>
-<p class="muted">Dernière mise à jour : 12 novembre 2026</p>
+<body data-page="privacy">
+  <a class="skip-link" href="#contenu" data-i18n="common.skip">Aller au contenu</a>
+  <div class="ambient" aria-hidden="true"><span class="ambient-warm"></span><span class="ambient-cool"></span><span class="ambient-light"></span></div>
 
-<div class="card"><p style="margin:0"><strong>En bref :</strong> Kevlux ne collecte aucune donnée personnelle, n’envoie rien sur Internet et ne contient ni publicité ni outil de suivi.</p></div>
+  <header class="site-header">
+    <a class="brand glass glass-press" href="index.html">
+      <img src="assets/img/kevlux-mark.svg" alt="" width="34" height="34">
+      <span>Kevlux</span>
+    </a>
+    <nav class="tabbar glass glass-strong" aria-label="Navigation principale" data-i18n-attr="aria-label:nav.label">
+      <a href="index.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><path d="M4.5 19.5C6.5 12 10.5 7.5 19.5 5.5"/><circle cx="11.6" cy="10.2" r="2.7" fill="currentColor" stroke="none"/></svg>
+        <span data-i18n="nav.home">Accueil</span>
+      </a>
+      <a href="assistance.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="3.4"/><path d="m6 6 3.6 3.6m4.8 4.8L18 18m0-12-3.6 3.6m-4.8 4.8L6 18"/></svg>
+        <span data-i18n="nav.support">Assistance</span>
+      </a>
+      <a href="confidentialite.html" aria-current="page">
+        <span class="glass-pill tab-pill" aria-hidden="true"></span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5 5 6.2v5.4c0 4.2 2.9 7.6 7 8.9 4.1-1.3 7-4.7 7-8.9V6.2z"/><path d="m9.2 12.1 2 2 3.8-3.9"/></svg>
+        <span data-i18n="nav.privacy">Confidentialité</span>
+      </a>
+    </nav>
+    <div class="lang-switch glass" role="group" aria-label="Langue" data-i18n-attr="aria-label:lang.label">
+      <span class="glass-pill lang-pill" aria-hidden="true"></span>
+      <button type="button" data-lang-btn="fr" lang="fr" aria-label="Français" aria-pressed="true">FR</button>
+      <button type="button" data-lang-btn="en" lang="en" aria-label="English" aria-pressed="false">EN</button>
+      <button type="button" data-lang-btn="es" lang="es" aria-label="Español" aria-pressed="false">ES</button>
+    </div>
+  </header>
 
-<h2>Caméra</h2>
-<p>Kevlux demande l’accès à la caméra pour mesurer la lumière. L’image est analysée en direct, sur l’iPhone. Aucune photo ni vidéo n’est enregistrée dans la photothèque ni transmise : la photo RAW prise pendant une mesure est analysée en mémoire puis effacée.</p>
+  <main id="contenu">
+    <section class="page-hero container">
+      <svg class="page-arc" viewBox="200 260 640 540" aria-hidden="true"><defs><linearGradient id="page-arc-grad" gradientUnits="userSpaceOnUse" x1="230" y1="760" x2="800" y2="300"><stop offset="0" stop-color="#FF6A1A"/><stop offset=".3" stop-color="#FFB15C"/><stop offset=".55" stop-color="#FFF3E6"/><stop offset=".78" stop-color="#A9C6FF"/><stop offset="1" stop-color="#3D7BFF"/></linearGradient></defs><path d="M230 760C287 548 388 389 800 300" pathLength="1" fill="none" stroke="url(#page-arc-grad)" stroke-width="34" stroke-linecap="round"/></svg>
+      <p class="eyebrow glass reveal"><span class="dot"></span><span data-i18n="nav.privacy">Confidentialité</span></p>
+      <h1 class="reveal" style="--d:.08s" data-i18n="privacy.title">Politique de confidentialité</h1>
+      <p class="page-date reveal" style="--d:.16s" data-i18n="privacy.date">Dernière mise à jour : 12 novembre 2026</p>
+    </section>
 
-<h2>Données enregistrées sur l’iPhone</h2>
-<p>L’historique des mesures, les profils de caméras, les sources de lumière et les réglages sont stockés uniquement sur votre iPhone, dans l’espace de l’application. Ils ne sont ni synchronisés ni envoyés, et ils sont supprimés lorsque vous supprimez l’application. Ils peuvent figurer dans les sauvegardes de l’iPhone que vous faites vous-même (iCloud ou ordinateur), selon vos réglages iOS.</p>
+    <div class="container doc">
+      <nav class="doc-toc glass" aria-labelledby="toc-title" data-toc>
+        <p id="toc-title" data-i18n="common.toc">Sommaire</p>
+        <span class="glass-pill toc-pill" aria-hidden="true"></span>
+        <ol>
+          <li><a href="#camera" data-i18n="privacy.camera.title">Caméra</a></li>
+          <li><a href="#donnees" data-i18n="privacy.data.title">Données enregistrées sur l’iPhone</a></li>
+          <li><a href="#suivi" data-i18n="privacy.tracking.title">Aucun suivi</a></li>
+          <li><a href="#apple" data-i18n="privacy.apple.title">Apple</a></li>
+          <li><a href="#droits" data-i18n="privacy.rights.title">Vos droits</a></li>
+          <li><a href="#responsable" data-i18n="privacy.controller.title">Responsable</a></li>
+        </ol>
+      </nav>
 
-<h2>Aucun suivi</h2>
-<p>Kevlux n’utilise aucun service tiers, aucun outil de statistiques ou de mesure d’audience, aucune publicité, aucun identifiant publicitaire et ne demande aucun compte.</p>
+      <article class="doc-body">
+        <div class="doc-summary glass glass-strong locus-rim reveal">
+          <span class="rim-glow" aria-hidden="true"></span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5 5 6.2v5.4c0 4.2 2.9 7.6 7 8.9 4.1-1.3 7-4.7 7-8.9V6.2z"/><path d="m9.2 12.1 2 2 3.8-3.9"/></svg>
+          <p data-i18n="privacy.summary"><strong>En bref :</strong> Kevlux ne collecte aucune donnée personnelle, n’envoie rien sur Internet et ne contient ni publicité ni outil de suivi.</p>
+        </div>
 
-<h2>Apple</h2>
-<p>Le téléchargement et les mises à jour passent par l’App Store d’Apple, soumis à la politique de confidentialité d’Apple. Si vous l’acceptez dans les réglages de l’iPhone, Apple peut partager avec le développeur des rapports de plantage anonymes.</p>
+        <section class="doc-section reveal" id="camera">
+          <h2 data-i18n="privacy.camera.title">Caméra</h2>
+          <p data-i18n="privacy.camera.text">Kevlux demande l’accès à la caméra pour mesurer la lumière. L’image est analysée en direct, sur l’iPhone. Aucune photo ni vidéo n’est enregistrée dans la photothèque ni transmise : la photo RAW prise pendant une mesure est analysée en mémoire puis effacée.</p>
+        </section>
 
-<h2>Vos droits</h2>
-<p>Kevlux ne détenant aucune donnée vous concernant, aucune demande d’accès ou de suppression n’est nécessaire : supprimer l’application efface tout. Pour toute question : <a href="mailto:llegoutpro@gmail.com">llegoutpro@gmail.com</a>.</p>
+        <section class="doc-section reveal" id="donnees">
+          <h2 data-i18n="privacy.data.title">Données enregistrées sur l’iPhone</h2>
+          <p data-i18n="privacy.data.text">L’historique des mesures, les profils de caméras, les sources de lumière et les réglages sont stockés uniquement sur votre iPhone, dans l’espace de l’application. Ils ne sont ni synchronisés ni envoyés, et ils sont supprimés lorsque vous supprimez l’application. Ils peuvent figurer dans les sauvegardes de l’iPhone que vous faites vous-même (iCloud ou ordinateur), selon vos réglages iOS.</p>
+        </section>
 
-<h2>Responsable</h2>
-<p>Louis Legout, éditeur de l’application.</p>
+        <section class="doc-section reveal" id="suivi">
+          <h2 data-i18n="privacy.tracking.title">Aucun suivi</h2>
+          <p data-i18n="privacy.tracking.text">Kevlux n’utilise aucun service tiers, aucun outil de statistiques ou de mesure d’audience, aucune publicité, aucun identifiant publicitaire et ne demande aucun compte.</p>
+        </section>
 
-<nav><a href="index.html">Assistance</a><a href="confidentialite.html">Confidentialité</a><a href="mentions-legales.html">Mentions légales</a></nav>
-<footer>© 2026 Louis Legout · Kevlux n’est affilié à aucun fabricant de caméras ou de gélatines cité.</footer>
-</main>
+        <section class="doc-section reveal" id="apple">
+          <h2 data-i18n="privacy.apple.title">Apple</h2>
+          <p data-i18n="privacy.apple.text">Le téléchargement et les mises à jour passent par l’App Store d’Apple, soumis à la politique de confidentialité d’Apple. Si vous l’acceptez dans les réglages de l’iPhone, Apple peut partager avec le développeur des rapports de plantage anonymes.</p>
+        </section>
+
+        <section class="doc-section reveal" id="droits">
+          <h2 data-i18n="privacy.rights.title">Vos droits</h2>
+          <p data-i18n="privacy.rights.text">Kevlux ne détenant aucune donnée vous concernant, aucune demande d’accès ou de suppression n’est nécessaire : supprimer l’application efface tout. Pour toute question : <a href="mailto:llegoutpro@gmail.com">llegoutpro@gmail.com</a>.</p>
+        </section>
+
+        <section class="doc-section reveal" id="responsable">
+          <h2 data-i18n="privacy.controller.title">Responsable</h2>
+          <p data-i18n="privacy.controller.text">Louis Legout, éditeur de l’application.</p>
+        </section>
+
+        <p class="doc-note" data-i18n="site.siteNote">Ce site n’utilise ni cookie ni outil de mesure d’audience ; seul votre choix de langue, si vous en faites un, est conservé dans votre navigateur. L’hébergeur, GitHub, peut enregistrer des journaux techniques (dont l’adresse IP) pour la sécurité du service.</p>
+      </article>
+    </div>
+  </main>
+
+  <footer class="site-footer container">
+    <div class="footer-card glass">
+      <div class="footer-brand">
+        <a class="brand" href="index.html"><img src="assets/img/kevlux-mark.svg" alt="" width="34" height="34"><span>Kevlux</span></a>
+        <p data-i18n="footer.tagline">La température et la teinte d’une lumière, pour régler la balance des blancs de n’importe quelle caméra.</p>
+      </div>
+      <nav class="footer-col" aria-labelledby="f-site">
+        <h2 id="f-site" data-i18n="footer.site">Site</h2>
+        <ul>
+          <li><a href="index.html" data-i18n="nav.home">Accueil</a></li>
+          <li><a href="assistance.html" data-i18n="nav.support">Assistance</a></li>
+          <li><a href="confidentialite.html" data-i18n="nav.privacy">Confidentialité</a></li>
+          <li><a href="mentions-legales.html" data-i18n="nav.legal">Mentions légales</a></li>
+        </ul>
+      </nav>
+      <div class="footer-col">
+        <h2 data-i18n="footer.contact">Contact</h2>
+        <ul>
+          <li><a href="mailto:llegoutpro@gmail.com?subject=Kevlux">llegoutpro@gmail.com</a></li>
+        </ul>
+      </div>
+      <p class="footer-legal" data-i18n="footer.legal">© 2026 Louis Legout · Kevlux n’est affilié à aucun fabricant de caméras ou de gélatines cité.</p>
+    </div>
+  </footer>
 </body>
 </html>

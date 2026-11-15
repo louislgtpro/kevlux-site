@@ -1,48 +1,130 @@
 <!doctype html>
 <html lang="fr">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Kevlux — Mentions légales</title>
-<meta name="description" content="Mentions légales de l’application Kevlux.">
-<style>
-:root{--bg:#f6f6f4;--fg:#1c1c1e;--muted:#5f5f63;--card:#fff;--line:#e3e3e0;--accent:#0a66d8}
-@media (prefers-color-scheme:dark){:root{--bg:#121214;--fg:#f2f2f2;--muted:#a0a0a6;--card:#1c1c1f;--line:#2c2c30;--accent:#4c9bff}}
-*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.6 -apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",Arial,sans-serif}
-main{max-width:720px;margin:0 auto;padding:40px 16px 64px}
-header{margin-bottom:28px}header a{color:var(--muted);text-decoration:none;font-size:15px}
-h1{font-size:34px;line-height:1.15;margin:8px 0 6px;letter-spacing:-.02em}
-h2{font-size:20px;margin:32px 0 8px}
-p,li{color:var(--fg)}.muted{color:var(--muted)}
-.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px 22px;margin:18px 0}
-a{color:var(--accent)}nav{display:flex;gap:18px;flex-wrap:wrap;margin-top:40px;font-size:15px}
-footer{margin-top:48px;color:var(--muted);font-size:14px;border-top:1px solid var(--line);padding-top:18px}
-.lang{float:right;font-size:15px}.lang a{margin-left:12px}.lang strong{margin-left:12px;color:var(--fg)}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title data-i18n="legal.meta.title">Kevlux — Mentions légales</title>
+  <meta name="description" content="Mentions légales de l’application Kevlux." data-i18n-attr="content:legal.meta.desc">
+  <meta name="theme-color" content="#07090d">
+  <link rel="icon" href="assets/img/kevlux-mark.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="stylesheet" href="assets/css/base/tokens.css">
+  <link rel="stylesheet" href="assets/css/base/base.css">
+  <link rel="stylesheet" href="assets/css/components/glass.css">
+  <link rel="stylesheet" href="assets/css/components/controls.css">
+  <link rel="stylesheet" href="assets/css/layout/site.css">
+  <link rel="stylesheet" href="assets/css/pages/doc.css">
+  <script src="assets/js/core/lang.js"></script>
+  <script src="assets/js/core/i18n.js" defer></script>
+  <script src="assets/js/ui/glass.js" defer></script>
+  <script src="assets/js/ui/reveal.js" defer></script>
+  <script src="assets/js/ui/toc.js" defer></script>
 </head>
-<body>
-<main>
-<header><a href="index.html">Kevlux</a><span class="lang"><strong>FR</strong><a href="en/legal.html" hreflang="en" lang="en">EN</a><a href="es/aviso-legal.html" hreflang="es" lang="es">ES</a></span></header>
-<h1>Mentions légales</h1>
+<body data-page="legal">
+  <a class="skip-link" href="#contenu" data-i18n="common.skip">Aller au contenu</a>
+  <div class="ambient" aria-hidden="true"><span class="ambient-warm"></span><span class="ambient-cool"></span><span class="ambient-light"></span></div>
 
-<h2>Éditeur</h2>
-<p>Louis Legout, éditeur à titre individuel.<br>Contact : <a href="mailto:llegoutpro@gmail.com">llegoutpro@gmail.com</a><br>Directeur de la publication : Louis Legout.</p>
+  <header class="site-header">
+    <a class="brand glass glass-press" href="index.html">
+      <img src="assets/img/kevlux-mark.svg" alt="" width="34" height="34">
+      <span>Kevlux</span>
+    </a>
+    <nav class="tabbar glass glass-strong" aria-label="Navigation principale" data-i18n-attr="aria-label:nav.label">
+      <a href="index.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><path d="M4.5 19.5C6.5 12 10.5 7.5 19.5 5.5"/><circle cx="11.6" cy="10.2" r="2.7" fill="currentColor" stroke="none"/></svg>
+        <span data-i18n="nav.home">Accueil</span>
+      </a>
+      <a href="assistance.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="3.4"/><path d="m6 6 3.6 3.6m4.8 4.8L18 18m0-12-3.6 3.6m-4.8 4.8L6 18"/></svg>
+        <span data-i18n="nav.support">Assistance</span>
+      </a>
+      <a href="confidentialite.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5 5 6.2v5.4c0 4.2 2.9 7.6 7 8.9 4.1-1.3 7-4.7 7-8.9V6.2z"/><path d="m9.2 12.1 2 2 3.8-3.9"/></svg>
+        <span data-i18n="nav.privacy">Confidentialité</span>
+      </a>
+    </nav>
+    <div class="lang-switch glass" role="group" aria-label="Langue" data-i18n-attr="aria-label:lang.label">
+      <span class="glass-pill lang-pill" aria-hidden="true"></span>
+      <button type="button" data-lang-btn="fr" lang="fr" aria-label="Français" aria-pressed="true">FR</button>
+      <button type="button" data-lang-btn="en" lang="en" aria-label="English" aria-pressed="false">EN</button>
+      <button type="button" data-lang-btn="es" lang="es" aria-label="Español" aria-pressed="false">ES</button>
+    </div>
+  </header>
 
-<h2>Hébergement</h2>
-<p>Ce site est hébergé par GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis. L’application est distribuée par Apple sur l’App Store.</p>
+  <main id="contenu">
+    <section class="page-hero container">
+      <svg class="page-arc" viewBox="200 260 640 540" aria-hidden="true"><defs><linearGradient id="page-arc-grad" gradientUnits="userSpaceOnUse" x1="230" y1="760" x2="800" y2="300"><stop offset="0" stop-color="#FF6A1A"/><stop offset=".3" stop-color="#FFB15C"/><stop offset=".55" stop-color="#FFF3E6"/><stop offset=".78" stop-color="#A9C6FF"/><stop offset="1" stop-color="#3D7BFF"/></linearGradient></defs><path d="M230 760C287 548 388 389 800 300" pathLength="1" fill="none" stroke="url(#page-arc-grad)" stroke-width="34" stroke-linecap="round"/></svg>
+      <p class="eyebrow glass reveal"><span class="dot"></span><span data-i18n="nav.legal">Mentions légales</span></p>
+      <h1 class="reveal" style="--d:.08s" data-i18n="legal.title">Mentions légales</h1>
+    </section>
 
-<h2>Mesure indicative</h2>
-<p>Kevlux estime la température de couleur et la teinte d’une lumière à partir de la caméra de l’iPhone, qui n’est pas un instrument de mesure étalonné. Les valeurs sont fournies à titre indicatif ; l’éditeur ne saurait être tenu responsable des conséquences de leur utilisation. Vérifiez toujours le rendu sur la caméra et sur un moniteur de contrôle.</p>
+    <div class="container doc">
+      <nav class="doc-toc glass" aria-labelledby="toc-title" data-toc>
+        <p id="toc-title" data-i18n="common.toc">Sommaire</p>
+        <span class="glass-pill toc-pill" aria-hidden="true"></span>
+        <ol>
+          <li><a href="#editeur" data-i18n="legal.publisher.title">Éditeur</a></li>
+          <li><a href="#hebergement" data-i18n="legal.hosting.title">Hébergement</a></li>
+          <li><a href="#mesure" data-i18n="legal.measure.title">Mesure indicative</a></li>
+          <li><a href="#marques" data-i18n="legal.marks.title">Marques</a></li>
+          <li><a href="#propriete" data-i18n="legal.ip.title">Propriété intellectuelle</a></li>
+        </ol>
+      </nav>
 
-<h2>Marques</h2>
-<p>ARRI, ALEXA, AMIRA, RED, V-RAPTOR, KOMODO, Sony, VENICE, BURANO, Canon, Blackmagic Design, URSA, PYXIS, Panasonic, LUMIX, VariCam, Nikon, DJI, PTZOptics, LEE Filters, Rosco, Cinegel, Apple, iPhone et App Store sont des marques de leurs propriétaires respectifs. Kevlux n’est affilié à aucun de ces fabricants, ni approuvé par eux. Les caractéristiques citées proviennent de leur documentation publique.</p>
+      <article class="doc-body">
+        <section class="doc-section reveal" id="editeur">
+          <h2 data-i18n="legal.publisher.title">Éditeur</h2>
+          <p data-i18n="legal.publisher.text">Louis Legout, éditeur à titre individuel.<br>Contact : <a href="mailto:llegoutpro@gmail.com">llegoutpro@gmail.com</a><br>Directeur de la publication : Louis Legout.</p>
+        </section>
 
-<h2>Propriété intellectuelle</h2>
-<p>L’application, son code, son icône et ses textes sont la propriété de Louis Legout. Toute reproduction non autorisée est interdite.</p>
+        <section class="doc-section reveal" id="hebergement">
+          <h2 data-i18n="legal.hosting.title">Hébergement</h2>
+          <p data-i18n="legal.hosting.text">Ce site est hébergé par GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis. L’application est distribuée par Apple sur l’App Store.</p>
+        </section>
 
-<nav><a href="index.html">Assistance</a><a href="confidentialite.html">Confidentialité</a><a href="mentions-legales.html">Mentions légales</a></nav>
-<footer>© 2026 Louis Legout · Kevlux n’est affilié à aucun fabricant de caméras ou de gélatines cité.</footer>
-</main>
+        <section class="doc-section reveal" id="mesure">
+          <h2 data-i18n="legal.measure.title">Mesure indicative</h2>
+          <p data-i18n="legal.measure.text">Kevlux estime la température de couleur et la teinte d’une lumière à partir de la caméra de l’iPhone, qui n’est pas un instrument de mesure étalonné. Les valeurs sont fournies à titre indicatif ; l’éditeur ne saurait être tenu responsable des conséquences de leur utilisation. Vérifiez toujours le rendu sur la caméra et sur un moniteur de contrôle.</p>
+        </section>
+
+        <section class="doc-section reveal" id="marques">
+          <h2 data-i18n="legal.marks.title">Marques</h2>
+          <p data-i18n="legal.marks.text">ARRI, ALEXA, AMIRA, RED, V-RAPTOR, KOMODO, Sony, VENICE, BURANO, Canon, Blackmagic Design, URSA, PYXIS, Panasonic, LUMIX, VariCam, Nikon, DJI, PTZOptics, LEE Filters, Rosco, Cinegel, Apple, iPhone et App Store sont des marques de leurs propriétaires respectifs. Kevlux n’est affilié à aucun de ces fabricants, ni approuvé par eux. Les caractéristiques citées proviennent de leur documentation publique.</p>
+        </section>
+
+        <section class="doc-section reveal" id="propriete">
+          <h2 data-i18n="legal.ip.title">Propriété intellectuelle</h2>
+          <p data-i18n="legal.ip.text">L’application, son code, son icône et ses textes sont la propriété de Louis Legout. Toute reproduction non autorisée est interdite.</p>
+        </section>
+
+        <p class="doc-note" data-i18n="legal.note"></p>
+      </article>
+    </div>
+  </main>
+
+  <footer class="site-footer container">
+    <div class="footer-card glass">
+      <div class="footer-brand">
+        <a class="brand" href="index.html"><img src="assets/img/kevlux-mark.svg" alt="" width="34" height="34"><span>Kevlux</span></a>
+        <p data-i18n="footer.tagline">La température et la teinte d’une lumière, pour régler la balance des blancs de n’importe quelle caméra.</p>
+      </div>
+      <nav class="footer-col" aria-labelledby="f-site">
+        <h2 id="f-site" data-i18n="footer.site">Site</h2>
+        <ul>
+          <li><a href="index.html" data-i18n="nav.home">Accueil</a></li>
+          <li><a href="assistance.html" data-i18n="nav.support">Assistance</a></li>
+          <li><a href="confidentialite.html" data-i18n="nav.privacy">Confidentialité</a></li>
+          <li><a href="mentions-legales.html" data-i18n="nav.legal">Mentions légales</a></li>
+        </ul>
+      </nav>
+      <div class="footer-col">
+        <h2 data-i18n="footer.contact">Contact</h2>
+        <ul>
+          <li><a href="mailto:llegoutpro@gmail.com?subject=Kevlux">llegoutpro@gmail.com</a></li>
+        </ul>
+      </div>
+      <p class="footer-legal" data-i18n="footer.legal">© 2026 Louis Legout · Kevlux n’est affilié à aucun fabricant de caméras ou de gélatines cité.</p>
+    </div>
+  </footer>
 </body>
 </html>

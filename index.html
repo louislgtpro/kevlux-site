@@ -1,52 +1,370 @@
 <!doctype html>
 <html lang="fr">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Kevlux — Assistance</title>
-<meta name="description" content="Kevlux : mesure de température de couleur et de teinte pour la balance des blancs. Assistance et contact.">
-<style>
-:root{--bg:#f6f6f4;--fg:#1c1c1e;--muted:#5f5f63;--card:#fff;--line:#e3e3e0;--accent:#0a66d8}
-@media (prefers-color-scheme:dark){:root{--bg:#121214;--fg:#f2f2f2;--muted:#a0a0a6;--card:#1c1c1f;--line:#2c2c30;--accent:#4c9bff}}
-*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.6 -apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",Arial,sans-serif}
-main{max-width:720px;margin:0 auto;padding:40px 16px 64px}
-header{margin-bottom:28px}header a{color:var(--muted);text-decoration:none;font-size:15px}
-h1{font-size:34px;line-height:1.15;margin:8px 0 6px;letter-spacing:-.02em}
-h2{font-size:20px;margin:32px 0 8px}
-p,li{color:var(--fg)}.muted{color:var(--muted)}
-.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px 22px;margin:18px 0}
-a{color:var(--accent)}nav{display:flex;gap:18px;flex-wrap:wrap;margin-top:40px;font-size:15px}
-footer{margin-top:48px;color:var(--muted);font-size:14px;border-top:1px solid var(--line);padding-top:18px}
-.lang{float:right;font-size:15px}.lang a{margin-left:12px}.lang strong{margin-left:12px;color:var(--fg)}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title data-i18n="home.meta.title">Kevlux — Température de couleur et teinte pour la balance des blancs</title>
+  <meta name="description" content="Kevlux mesure la température de couleur et la teinte d’une lumière avec l’iPhone, pour régler la balance des blancs de n’importe quelle caméra." data-i18n-attr="content:home.meta.desc">
+  <meta name="theme-color" content="#07090d">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Kevlux">
+  <meta property="og:description" content="Température de couleur et teinte, pour régler la balance des blancs de n’importe quelle caméra.">
+  <link rel="icon" href="assets/img/kevlux-mark.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="stylesheet" href="assets/css/base/tokens.css">
+  <link rel="stylesheet" href="assets/css/base/base.css">
+  <link rel="stylesheet" href="assets/css/components/glass.css">
+  <link rel="stylesheet" href="assets/css/components/controls.css">
+  <link rel="stylesheet" href="assets/css/layout/site.css">
+  <link rel="stylesheet" href="assets/css/pages/home.css">
+  <script src="assets/js/core/lang.js"></script>
+  <script src="assets/js/core/i18n.js" defer></script>
+  <script src="assets/js/ui/glass.js" defer></script>
+  <script src="assets/js/ui/reveal.js" defer></script>
+  <script src="assets/js/pages/locus.js" defer></script>
+  <script src="assets/js/pages/showcase.js" defer></script>
 </head>
-<body>
-<main>
-<header><a href="index.html">Kevlux</a><span class="lang"><strong>FR</strong><a href="en/index.html" hreflang="en" lang="en">EN</a><a href="es/index.html" hreflang="es" lang="es">ES</a></span></header>
-<h1>Kevlux</h1>
-<p class="muted">Mesure de la température de couleur et de la teinte d’une lumière, pour régler la balance des blancs de n’importe quelle caméra.</p>
+<body data-page="home">
+  <a class="skip-link" href="#contenu" data-i18n="common.skip">Aller au contenu</a>
+  <div class="ambient" aria-hidden="true"><span class="ambient-warm"></span><span class="ambient-cool"></span><span class="ambient-light"></span></div>
 
-<div class="card">
-<h2 style="margin-top:0">Assistance</h2>
-<p>Une question, un problème, une caméra à ajouter au catalogue ? Écrivez à <a href="mailto:llegoutpro@gmail.com?subject=Kevlux">llegoutpro@gmail.com</a>. Précisez votre modèle d’iPhone et, si possible, la lumière mesurée.</p>
-</div>
+  <header class="site-header">
+    <a class="brand glass glass-press" href="index.html">
+      <img src="assets/img/kevlux-mark.svg" alt="" width="34" height="34">
+      <span>Kevlux</span>
+    </a>
+    <nav class="tabbar glass glass-strong" aria-label="Navigation principale" data-i18n-attr="aria-label:nav.label">
+      <a href="index.html" aria-current="page">
+        <span class="glass-pill tab-pill" aria-hidden="true"></span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><path d="M4.5 19.5C6.5 12 10.5 7.5 19.5 5.5"/><circle cx="11.6" cy="10.2" r="2.7" fill="currentColor" stroke="none"/></svg>
+        <span data-i18n="nav.home">Accueil</span>
+      </a>
+      <a href="assistance.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="3.4"/><path d="m6 6 3.6 3.6m4.8 4.8L18 18m0-12-3.6 3.6m-4.8 4.8L6 18"/></svg>
+        <span data-i18n="nav.support">Assistance</span>
+      </a>
+      <a href="confidentialite.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5 5 6.2v5.4c0 4.2 2.9 7.6 7 8.9 4.1-1.3 7-4.7 7-8.9V6.2z"/><path d="m9.2 12.1 2 2 3.8-3.9"/></svg>
+        <span data-i18n="nav.privacy">Confidentialité</span>
+      </a>
+    </nav>
+    <div class="lang-switch glass" role="group" aria-label="Langue" data-i18n-attr="aria-label:lang.label">
+      <span class="glass-pill lang-pill" aria-hidden="true"></span>
+      <button type="button" data-lang-btn="fr" lang="fr" aria-label="Français" aria-pressed="true">FR</button>
+      <button type="button" data-lang-btn="en" lang="en" aria-label="English" aria-pressed="false">EN</button>
+      <button type="button" data-lang-btn="es" lang="es" aria-label="Español" aria-pressed="false">ES</button>
+    </div>
+  </header>
 
-<h2>Bien mesurer</h2>
-<ul>
-<li>Placez une carte grise (ou un mur blanc) à l’endroit du sujet, face à la lumière, et remplissez le réticule.</li>
-<li>Évitez les reflets et votre propre ombre ; gardez l’iPhone immobile environ une seconde après avoir touché « Mesurer ».</li>
-<li>Sans référence, le mode Scène estime la lumière sur toute l’image : c’est moins sûr, la confiance ne dépasse jamais « moyenne ».</li>
-<li>Choisissez votre caméra cible : la température est arrondie à son pas et la correction de teinte est indiquée dans son sens.</li>
-</ul>
+  <main id="contenu">
+    <section class="hero container">
+      <div class="hero-copy">
+        <p class="eyebrow glass reveal"><span class="dot"></span><span data-i18n="home.hero.eyebrow">Balance des blancs, sur iPhone et iPad</span></p>
+        <h1 class="hero-title reveal" style="--d:.08s" data-i18n="home.hero.title">Lisez la couleur de la <span class="locus-text">lumière</span>.</h1>
+        <p class="hero-lead reveal" style="--d:.16s" data-i18n="home.hero.lead">Visez une carte grise : Kevlux mesure la température et la teinte d’une lumière, puis vous dit quoi régler sur votre caméra.</p>
+        <div class="hero-actions reveal" style="--d:.24s">
+          <a class="btn btn-primary" href="#apercu">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="6.5"/><path d="M12 2.5v4m0 11v4M2.5 12h4m11 0h4"/></svg>
+            <span data-i18n="home.hero.cta">Découvrir l’app</span>
+          </a>
+          <a class="btn glass" href="assistance.html" data-i18n="home.hero.support">Assistance</a>
+        </div>
+        <p class="hero-meta reveal" style="--d:.32s" data-i18n="home.hero.meta">Gratuit · Sans compte ni publicité · Bientôt sur l’App Store</p>
+      </div>
 
-<h2>Questions fréquentes</h2>
-<p><strong>La mesure est-elle exacte ?</strong> Elle est indicative. L’iPhone n’est pas un colorimètre étalonné ; la marge affichée (±) est la dispersion des images, pas une exactitude garantie. Vérifiez toujours le rendu sur la caméra.</p>
-<p><strong>Pourquoi le sens de la teinte est-il parfois « non documenté » ?</strong> Peu de fabricants publient dans quel sens agissent les valeurs de teinte positives. Kevlux indique alors la couleur vers laquelle corriger ; l’outil « Vérifier avec Kevlux… » de la fiche caméra permet de le déterminer une fois pour toutes.</p>
-<p><strong>Mes données sont-elles envoyées quelque part ?</strong> Non. Voir la <a href="confidentialite.html">politique de confidentialité</a>.</p>
+      <div class="instrument glass glass-strong reveal" style="--d:.12s">
+        <div class="instrument-head">
+          <span class="badge badge-neutral">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M8 12.5c0-2.2 1.8-4 4-4s4 1.8 4 4"/><path d="M12 12.5 14.5 10"/><circle cx="12" cy="12" r="9"/></svg>
+            <span data-i18n="home.locus.badge">Aperçu interactif</span>
+          </span>
+          <span class="instrument-mired"><span class="num" data-locus-mired>179</span> <span data-i18n="home.locus.mired">mireds</span></span>
+        </div>
 
-<nav><a href="index.html">Assistance</a><a href="confidentialite.html">Confidentialité</a><a href="mentions-legales.html">Mentions légales</a></nav>
-<footer>© 2026 Louis Legout · Kevlux n’est affilié à aucun fabricant de caméras ou de gélatines cité.</footer>
-</main>
+        <div class="plate">
+          <svg class="locus" viewBox="180 255 680 545" data-locus>
+            <defs>
+              <linearGradient id="locus-grad" gradientUnits="userSpaceOnUse" x1="230" y1="760" x2="800" y2="300">
+                <stop offset="0" stop-color="#FF6A1A"/>
+                <stop offset=".3" stop-color="#FFB15C"/>
+                <stop offset=".55" stop-color="#FFF3E6"/>
+                <stop offset=".78" stop-color="#A9C6FF"/>
+                <stop offset="1" stop-color="#3D7BFF"/>
+              </linearGradient>
+              <radialGradient id="locus-glow">
+                <stop offset="0" class="glow-stop" stop-opacity=".5"/>
+                <stop offset="1" class="glow-stop" stop-opacity="0"/>
+              </radialGradient>
+              <radialGradient id="dot-sheen" cx=".35" cy=".28" r=".8">
+                <stop offset="0" stop-color="#fff"/>
+                <stop offset=".6" stop-color="#fff"/>
+                <stop offset="1" stop-color="#dfe3ea"/>
+              </radialGradient>
+              <pattern id="locus-grid" width="50" height="50" patternUnits="userSpaceOnUse">
+                <path d="M50 0H0v50" fill="none" stroke="#fff" stroke-opacity=".05" stroke-width="1.5"/>
+              </pattern>
+              <filter id="locus-blur" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="22"/></filter>
+            </defs>
+            <rect x="180" y="255" width="680" height="545" fill="url(#locus-grid)"/>
+            <circle class="locus-halo" data-locus-halo cx="524" cy="391" r="190" fill="url(#locus-glow)"/>
+            <path class="locus-bloom" d="M230 760C287 548 388 389 800 300" fill="none" stroke="url(#locus-grad)" stroke-width="64" stroke-linecap="round" filter="url(#locus-blur)" opacity=".5"/>
+            <path class="locus-arc" data-locus-path d="M230 760C287 548 388 389 800 300" fill="none" stroke="url(#locus-grad)" stroke-width="58" stroke-linecap="round"/>
+            <g class="locus-ticks" data-locus-ticks></g>
+            <path class="locus-hit" d="M230 760C287 548 388 389 800 300" fill="none" stroke="transparent" stroke-width="150" stroke-linecap="round"/>
+            <g class="locus-dot" data-locus-dot transform="translate(524 391)" tabindex="0" role="slider" aria-valuemin="1900" aria-valuemax="12000" aria-valuenow="5600" aria-valuetext="5600 K" aria-label="Température de couleur" data-i18n-attr="aria-label:home.locus.slider">
+              <circle class="dot-ring" r="80" fill="none" stroke="#fff" stroke-width="2"/>
+              <circle r="66" fill="#0b0d12"/>
+              <circle class="dot-core" r="52" fill="url(#dot-sheen)"/>
+            </g>
+          </svg>
+          <p class="plate-hint" data-i18n="home.locus.hint">Faites glisser le point blanc le long du lieu de Planck.</p>
+        </div>
+
+        <div class="presets" role="group" aria-label="Lumières types" data-i18n-attr="aria-label:home.locus.presets">
+          <button type="button" class="chip glass glass-press" data-preset="1900" aria-pressed="false"><span data-i18n="home.locus.candle">Bougie</span></button>
+          <button type="button" class="chip glass glass-press" data-preset="3200" aria-pressed="false"><span data-i18n="home.locus.tungsten">Tungstène</span></button>
+          <button type="button" class="chip glass glass-press" data-preset="5600" aria-pressed="true"><span data-i18n="home.locus.daylight">Lumière du jour</span></button>
+          <button type="button" class="chip glass glass-press" data-preset="7500" aria-pressed="false"><span data-i18n="home.locus.shade">Ombre</span></button>
+        </div>
+
+        <div class="readout">
+          <p class="readout-value"><span class="num" data-locus-k>5 600</span><span class="readout-unit">K</span></p>
+          <div class="gauge" data-locus-gauge><span class="gauge-knob"></span></div>
+          <div class="gauge-labels"><span data-i18n="common.amber">Ambre</span><span data-i18n="common.blue">Bleu</span></div>
+          <p class="readout-duv"><span>Duv <span class="num" data-num="0" data-digits="3">0,000</span></span><span data-i18n="common.neutral">lumière neutre</span></p>
+          <p class="readout-note">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5.5M12 7.6v.1"/></svg>
+            <span data-i18n="home.locus.note">Simulation : sur le lieu de Planck, le Duv est nul par définition.</span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="facts container" aria-label="En bref" data-i18n-attr="aria-label:home.facts.label">
+      <div class="fact glass reveal">
+        <strong>RAW</strong>
+        <span data-i18n="home.facts.raw">Données brutes du capteur</span>
+      </div>
+      <div class="fact glass reveal" style="--d:.06s">
+        <strong><span class="num" data-num="90">90</span>+</strong>
+        <span data-i18n="home.facts.cameras">Caméras au catalogue</span>
+      </div>
+      <div class="fact glass reveal" style="--d:.12s">
+        <strong>Duv</strong>
+        <span data-i18n="home.facts.duv">Teinte vert ↔ magenta</span>
+      </div>
+      <div class="fact glass reveal" style="--d:.18s">
+        <strong>0</strong>
+        <span data-i18n="home.facts.data">Donnée collectée</span>
+      </div>
+    </section>
+
+    <section class="section container" id="principe">
+      <header class="section-head reveal">
+        <span class="kicker" data-i18n="home.steps.kicker">Principe</span>
+        <h2 data-i18n="home.steps.title">Visez. Mesurez. Réglez.</h2>
+        <p data-i18n="home.steps.lead">Une seconde suffit : Kevlux combine une dizaine d’images et affiche la dispersion de la mesure.</p>
+      </header>
+      <ol class="steps">
+        <li class="step glass reveal">
+          <div class="step-art art-aim" aria-hidden="true">
+            <span class="art-card"></span>
+            <span class="art-reticle"><i></i><i></i><i></i><i></i></span>
+            <span class="art-cross"></span>
+          </div>
+          <span class="step-index">01</span>
+          <h3 data-i18n="home.steps.s1.title">Visez une surface neutre</h3>
+          <p data-i18n="home.steps.s1.text">Une carte grise, une carte blanche ou un mur blanc, à l’endroit du sujet et face à la lumière. Remplissez le réticule.</p>
+        </li>
+        <li class="step glass reveal" style="--d:.08s">
+          <div class="step-art art-measure" aria-hidden="true">
+            <svg viewBox="0 0 120 120"><defs><linearGradient id="ring-grad" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#FFB15C"/><stop offset=".5" stop-color="#FFF3E6"/><stop offset="1" stop-color="#A9C6FF"/></linearGradient></defs><circle cx="60" cy="60" r="46" fill="none" stroke="#fff" stroke-opacity=".08" stroke-width="7"/><circle class="art-ring" cx="60" cy="60" r="46" fill="none" stroke="url(#ring-grad)" stroke-width="7" stroke-linecap="round" pathLength="100"/></svg>
+            <span class="art-value"><span class="num" data-num="5450" data-unit="K">5 450 K</span><small class="num">± <span data-num="80" data-unit="K">80 K</span></small></span>
+          </div>
+          <span class="step-index">02</span>
+          <h3 data-i18n="home.steps.s2.title">Mesurez</h3>
+          <p data-i18n="home.steps.s2.text">Touchez « Mesurer » et gardez l’iPhone immobile une seconde. Kevlux lit la température en kelvins et l’écart de teinte en Duv.</p>
+        </li>
+        <li class="step glass reveal" style="--d:.16s">
+          <div class="step-art art-camera" aria-hidden="true">
+            <div class="art-lcd">
+              <span class="art-lcd-label">WB</span>
+              <span class="art-lcd-value num" data-num="5450" data-unit="K">5 450 K</span>
+              <div class="gauge gauge-tint art-tint"><span class="gauge-knob"></span></div>
+            </div>
+          </div>
+          <span class="step-index">03</span>
+          <h3 data-i18n="home.steps.s3.title">Réglez votre caméra</h3>
+          <p data-i18n="home.steps.s3.text">La température est arrondie au pas de votre caméra et la correction de teinte est indiquée dans son sens.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section class="section container" id="apercu">
+      <header class="section-head reveal">
+        <span class="kicker" data-i18n="home.show.kicker">L’app</span>
+        <h2 data-i18n="home.show.title">Pensée pour les plateaux.</h2>
+        <p data-i18n="home.show.lead">Un résultat lisible d’un coup d’œil, des outils pour toute l’équipe image, et Liquid Glass sur iOS 26.</p>
+      </header>
+      <div class="showcase" data-showcase>
+        <div class="phone reveal">
+          <div class="phone-frame">
+            <div class="phone-screen">
+              <img class="is-active" src="assets/img/screens/fr/01-held.jpg" data-i18n-src="assets/img/screens/{lang}/01-held.jpg" alt="" width="600" height="1304" loading="lazy" decoding="async">
+              <img src="assets/img/screens/fr/04-fullscreen.jpg" data-i18n-src="assets/img/screens/{lang}/04-fullscreen.jpg" alt="" width="600" height="1304" loading="lazy" decoding="async">
+              <img src="assets/img/screens/fr/05-lighting.jpg" data-i18n-src="assets/img/screens/{lang}/05-lighting.jpg" alt="" width="600" height="1304" loading="lazy" decoding="async">
+              <img src="assets/img/screens/fr/06-history.jpg" data-i18n-src="assets/img/screens/{lang}/06-history.jpg" alt="" width="600" height="1304" loading="lazy" decoding="async">
+              <img src="assets/img/screens/fr/07-catalog.jpg" data-i18n-src="assets/img/screens/{lang}/07-catalog.jpg" alt="" width="600" height="1304" loading="lazy" decoding="async">
+            </div>
+            <span class="phone-island"></span>
+            <span class="phone-glare"></span>
+          </div>
+        </div>
+        <div class="show-list" role="tablist" aria-label="Écrans de l’app" data-i18n-attr="aria-label:home.show.label">
+          <button type="button" class="show-item glass is-active" role="tab" aria-selected="true">
+            <span class="show-progress"></span>
+            <strong data-i18n="home.show.i1.title">Un résultat complet</strong>
+            <span data-i18n="home.show.i1.text">Température au pas de votre caméra, teinte en Duv avec son sens, correction à régler et indicateur de confiance.</span>
+          </button>
+          <button type="button" class="show-item glass" role="tab" aria-selected="false">
+            <span class="show-progress"></span>
+            <strong data-i18n="home.show.i2.title">Plein écran</strong>
+            <span data-i18n="home.show.i2.text">L’aperçu occupe tout l’écran, avec le seul bouton « Mesurer ».</span>
+          </button>
+          <button type="button" class="show-item glass" role="tab" aria-selected="false">
+            <span class="show-progress"></span>
+            <strong data-i18n="home.show.i3.title">Éclairage mixte</strong>
+            <span data-i18n="home.show.i3.text">Comparez plusieurs sources à une cible et trouvez les gélatines LEE ou Rosco qui les accordent.</span>
+          </button>
+          <button type="button" class="show-item glass" role="tab" aria-selected="false">
+            <span class="show-progress"></span>
+            <strong data-i18n="home.show.i4.title">Historique</strong>
+            <span data-i18n="home.show.i4.text">Chaque mesure enregistrée, avec la caméra cible et vos notes.</span>
+          </button>
+          <button type="button" class="show-item glass" role="tab" aria-selected="false">
+            <span class="show-progress"></span>
+            <strong data-i18n="home.show.i5.title">Catalogue de caméras</strong>
+            <span data-i18n="home.show.i5.text">Plus de 90 caméras, avec leurs plages et leurs pas relevés dans la documentation des fabricants.</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container" id="fonctions">
+      <header class="section-head reveal">
+        <span class="kicker" data-i18n="home.feat.kicker">Fonctions</span>
+        <h2 data-i18n="home.feat.title">Tout ce qu’il faut, rien de trop.</h2>
+      </header>
+      <div class="bento">
+        <article class="tile tile-methods glass reveal">
+          <div class="methods" aria-hidden="true">
+            <div class="method method-main"><b>C</b><span data-i18n="home.feat.m.c">Photo RAW, données du capteur</span><em data-i18n="home.feat.m.main">Résultat</em></div>
+            <div class="method"><b>A</b><span data-i18n="home.feat.m.a">Image vidéo linéarisée</span><em data-i18n="home.feat.m.check">Contrôle</em></div>
+            <div class="method"><b>B</b><span data-i18n="home.feat.m.b">Balance automatique de l’iPhone</span><em data-i18n="home.feat.m.check2">Contrôle</em></div>
+          </div>
+          <h3 data-i18n="home.feat.methods.title">Trois méthodes, une réponse</h3>
+          <p data-i18n="home.feat.methods.text">Quand l’iPhone le permet, Kevlux prend une photo RAW et calcule la couleur à partir des données brutes du capteur. Deux autres méthodes servent de contrôle : si elles ne sont pas d’accord, Kevlux vous prévient.</p>
+        </article>
+
+        <article class="tile tile-tint glass reveal" style="--d:.06s">
+          <div class="tint-demo" aria-hidden="true">
+            <div class="gauge gauge-tint"><span class="gauge-knob"></span></div>
+            <div class="gauge-labels"><span data-i18n="common.magenta">Magenta</span><span data-i18n="common.green">Vert</span></div>
+          </div>
+          <h3 data-i18n="home.feat.tint.title">Le sens de la teinte, enfin clair</h3>
+          <p data-i18n="home.feat.tint.text">Duv standard, sens lisible (lumière verte ou magenta) et correction à régler dans le sens propre au fabricant.</p>
+        </article>
+
+        <article class="tile tile-catalog glass reveal">
+          <div class="marquee" aria-hidden="true">
+            <div class="marquee-track">
+              <span>ARRI</span><span>RED</span><span>Sony</span><span>Canon</span><span>Blackmagic Design</span><span>Panasonic</span><span>Nikon</span><span>DJI</span><span>PTZOptics</span>
+              <span>ARRI</span><span>RED</span><span>Sony</span><span>Canon</span><span>Blackmagic Design</span><span>Panasonic</span><span>Nikon</span><span>DJI</span><span>PTZOptics</span>
+            </div>
+          </div>
+          <h3 data-i18n="home.feat.catalog.title">Plus de 90 caméras</h3>
+          <p data-i18n="home.feat.catalog.text">Cinéma, hybrides, caméscopes et caméras PTZ, avec plages et pas relevés chez les fabricants. Une valeur non publiée reste inconnue : Kevlux ne l’invente pas.</p>
+        </article>
+
+        <article class="tile tile-gels glass reveal" style="--d:.06s">
+          <div class="gels" aria-hidden="true">
+            <span style="--g:#ffe7cc">1/8 CTO</span>
+            <span style="--g:#ffcf9c">1/2 CTO</span>
+            <span style="--g:#c6d8ff">1/4 CTB</span>
+            <span style="--g:#f6d3ee">Minus Green</span>
+            <span style="--g:#d6f0c6">Plus Green</span>
+          </div>
+          <h3 data-i18n="home.feat.gels.title">Éclairage mixte</h3>
+          <p data-i18n="home.feat.gels.text">Comparez vos sources à une cible, en mireds et en Duv, et trouvez une ou deux gélatines LEE ou Rosco qui les y amènent.</p>
+        </article>
+
+        <article class="tile tile-scene glass reveal">
+          <div class="tile-icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="10" width="36" height="28" rx="7"/><path d="m6 31 10-9 8 7 6-5 12 9"/><circle cx="33" cy="19" r="3"/></svg>
+          </div>
+          <h3 data-i18n="home.feat.scene.title">Mode Scène</h3>
+          <p data-i18n="home.feat.scene.text">Sans carte grise, Kevlux estime la lumière sur toute l’image. C’est moins sûr : la confiance ne dépasse jamais « moyenne ».</p>
+        </article>
+
+        <article class="tile tile-privacy glass reveal" style="--d:.06s">
+          <div class="tile-icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M24 6 10 11.5v10.8c0 8.4 5.8 15.2 14 17.7 8.2-2.5 14-9.3 14-17.7V11.5z"/><path d="m18 24 4.2 4.2L31 19.5"/></svg>
+          </div>
+          <h3 data-i18n="home.feat.privacy.title">Rien ne quitte l’iPhone</h3>
+          <p data-i18n="home.feat.privacy.text">Aucun compte, aucune publicité, aucune donnée collectée. Les images sont analysées sur l’appareil, puis oubliées.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section container" id="honnete">
+      <div class="honest-card glass glass-strong locus-rim reveal">
+        <span class="rim-glow" aria-hidden="true"></span>
+        <span class="kicker" data-i18n="home.honest.kicker">Une mesure honnête</span>
+        <p class="honest-figure" aria-hidden="true"><span class="num" data-num="5450" data-unit="K">5 450 K</span> <span class="honest-pm num">± <span data-num="80" data-unit="K">80 K</span></span></p>
+        <h2 data-i18n="home.honest.title">La marge affichée est une dispersion, pas une promesse.</h2>
+        <p data-i18n="home.honest.text">L’iPhone n’est pas un colorimètre étalonné. Kevlux donne une mesure indicative, combine les images d’une seconde et affiche leur dispersion. Il ne prétend jamais à une fausse précision : vérifiez toujours le rendu sur la caméra.</p>
+      </div>
+    </section>
+
+    <section class="section container">
+      <div class="cta reveal">
+        <img class="cta-icon" src="assets/img/kevlux-mark.svg" alt="" width="128" height="128" loading="lazy">
+        <h2 data-i18n="home.cta.title">Kevlux arrive bientôt sur l’App Store.</h2>
+        <p data-i18n="home.cta.text">Gratuit, sans compte ni publicité. iPhone et iPad sous iOS 26 ou ultérieur.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="mailto:llegoutpro@gmail.com?subject=Kevlux">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5.5" width="18" height="13" rx="3"/><path d="m4 7.5 8 5.5 8-5.5"/></svg>
+            <span data-i18n="home.cta.mail">Nous écrire</span>
+          </a>
+          <a class="btn glass" href="assistance.html" data-i18n="home.cta.support">Bien mesurer</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer container">
+    <div class="footer-card glass">
+      <div class="footer-brand">
+        <a class="brand" href="index.html"><img src="assets/img/kevlux-mark.svg" alt="" width="34" height="34"><span>Kevlux</span></a>
+        <p data-i18n="footer.tagline">La température et la teinte d’une lumière, pour régler la balance des blancs de n’importe quelle caméra.</p>
+      </div>
+      <nav class="footer-col" aria-labelledby="f-site">
+        <h2 id="f-site" data-i18n="footer.site">Site</h2>
+        <ul>
+          <li><a href="index.html" data-i18n="nav.home">Accueil</a></li>
+          <li><a href="assistance.html" data-i18n="nav.support">Assistance</a></li>
+          <li><a href="confidentialite.html" data-i18n="nav.privacy">Confidentialité</a></li>
+          <li><a href="mentions-legales.html" data-i18n="nav.legal">Mentions légales</a></li>
+        </ul>
+      </nav>
+      <div class="footer-col">
+        <h2 data-i18n="footer.contact">Contact</h2>
+        <ul>
+          <li><a href="mailto:llegoutpro@gmail.com?subject=Kevlux">llegoutpro@gmail.com</a></li>
+        </ul>
+      </div>
+      <p class="footer-legal" data-i18n="footer.legal">© 2026 Louis Legout · Kevlux n’est affilié à aucun fabricant de caméras ou de gélatines cité.</p>
+    </div>
+  </footer>
 </body>
 </html>

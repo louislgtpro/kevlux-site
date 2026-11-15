@@ -1,0 +1,51 @@
+@property --lit {
+  syntax: "<number>";
+  inherits: false;
+  initial-value: 0;
+}
+
+:root {
+  color-scheme: dark;
+
+  --bg-0: #07090d;
+  --bg-1: #0d1017;
+  --bg-2: #1a1f2b;
+
+  --ink: #f4f5f7;
+  --ink-2: rgb(235 238 245 / 0.7);
+  --ink-3: rgb(235 238 245 / 0.46);
+  --line: rgb(255 255 255 / 0.08);
+
+  --amber: #ff6a1a;
+  --amber-soft: #ffb15c;
+  --cream: #fff3e6;
+  --ice: #a9c6ff;
+  --blue: #3d7bff;
+  --action: #0a84ff;
+  --action-hi: #47a3ff;
+  --green: #34c759;
+  --magenta: #ff3bd4;
+
+  --tint: 255 243 230;
+
+  --locus: linear-gradient(100deg, var(--amber) 0%, var(--amber-soft) 30%, var(--cream) 55%, var(--ice) 78%, var(--blue) 100%);
+  --gauge-temp: linear-gradient(90deg, #ff8a2a 0%, #ffc590 34%, #fff1e2 60%, #ffffff 70%, #9cbcff 86%, #3d7bff 100%);
+  --gauge-tint: linear-gradient(90deg, #ff2bd6 0%, #f7c3ec 38%, #f1f1f1 50%, #c3ebcb 62%, #34c759 100%);
+
+  --radius-s: 14px;
+  --radius-m: 24px;
+  --radius-l: 34px;
+  --radius-xl: 46px;
+
+  --font: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-display: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-round: ui-rounded, "SF Pro Rounded", var(--font-display);
+
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-liquid: cubic-bezier(0.3, 1.35, 0.45, 1);
+
+  --gutter: clamp(16px, 4vw, 40px);
+  --maxw: 1160px;
+  --header-h: 76px;
+}

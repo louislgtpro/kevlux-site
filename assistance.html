@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title data-i18n="support.meta.title">Kevlux — Assistance</title>
+  <meta name="description" content="Assistance de Kevlux : contact, conseils pour bien mesurer et questions fréquentes." data-i18n-attr="content:support.meta.desc">
+  <meta name="theme-color" content="#07090d">
+  <link rel="icon" href="assets/img/kevlux-mark.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="stylesheet" href="assets/css/base/tokens.css">
+  <link rel="stylesheet" href="assets/css/base/base.css">
+  <link rel="stylesheet" href="assets/css/components/glass.css">
+  <link rel="stylesheet" href="assets/css/components/controls.css">
+  <link rel="stylesheet" href="assets/css/layout/site.css">
+  <link rel="stylesheet" href="assets/css/pages/doc.css">
+  <script src="assets/js/core/lang.js"></script>
+  <script src="assets/js/core/i18n.js" defer></script>
+  <script src="assets/js/ui/glass.js" defer></script>
+  <script src="assets/js/ui/reveal.js" defer></script>
+  <script src="assets/js/pages/support.js" defer></script>
+</head>
+<body data-page="support">
+  <a class="skip-link" href="#contenu" data-i18n="common.skip">Aller au contenu</a>
+  <div class="ambient" aria-hidden="true"><span class="ambient-warm"></span><span class="ambient-cool"></span><span class="ambient-light"></span></div>
+
+  <header class="site-header">
+    <a class="brand glass glass-press" href="index.html">
+      <img src="assets/img/kevlux-mark.svg" alt="" width="34" height="34">
+      <span>Kevlux</span>
+    </a>
+    <nav class="tabbar glass glass-strong" aria-label="Navigation principale" data-i18n-attr="aria-label:nav.label">
+      <a href="index.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><path d="M4.5 19.5C6.5 12 10.5 7.5 19.5 5.5"/><circle cx="11.6" cy="10.2" r="2.7" fill="currentColor" stroke="none"/></svg>
+        <span data-i18n="nav.home">Accueil</span>
+      </a>
+      <a href="assistance.html" aria-current="page">
+        <span class="glass-pill tab-pill" aria-hidden="true"></span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="3.4"/><path d="m6 6 3.6 3.6m4.8 4.8L18 18m0-12-3.6 3.6m-4.8 4.8L6 18"/></svg>
+        <span data-i18n="nav.support">Assistance</span>
+      </a>
+      <a href="confidentialite.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5 5 6.2v5.4c0 4.2 2.9 7.6 7 8.9 4.1-1.3 7-4.7 7-8.9V6.2z"/><path d="m9.2 12.1 2 2 3.8-3.9"/></svg>
+        <span data-i18n="nav.privacy">Confidentialité</span>
+      </a>
+    </nav>
+    <div class="lang-switch glass" role="group" aria-label="Langue" data-i18n-attr="aria-label:lang.label">
+      <span class="glass-pill lang-pill" aria-hidden="true"></span>
+      <button type="button" data-lang-btn="fr" lang="fr" aria-label="Français" aria-pressed="true">FR</button>
+      <button type="button" data-lang-btn="en" lang="en" aria-label="English" aria-pressed="false">EN</button>
+      <button type="button" data-lang-btn="es" lang="es" aria-label="Español" aria-pressed="false">ES</button>
+    </div>
+  </header>
+
+  <main id="contenu">
+    <section class="page-hero container">
+      <svg class="page-arc" viewBox="200 260 640 540" aria-hidden="true"><defs><linearGradient id="page-arc-grad" gradientUnits="userSpaceOnUse" x1="230" y1="760" x2="800" y2="300"><stop offset="0" stop-color="#FF6A1A"/><stop offset=".3" stop-color="#FFB15C"/><stop offset=".55" stop-color="#FFF3E6"/><stop offset=".78" stop-color="#A9C6FF"/><stop offset="1" stop-color="#3D7BFF"/></linearGradient></defs><path d="M230 760C287 548 388 389 800 300" pathLength="1" fill="none" stroke="url(#page-arc-grad)" stroke-width="34" stroke-linecap="round"/></svg>
+      <p class="eyebrow glass reveal"><span class="dot"></span><span data-i18n="nav.support">Assistance</span></p>
+      <h1 class="reveal" style="--d:.08s" data-i18n="support.title">Une question ? Écrivez-nous.</h1>
+      <p class="page-lead reveal" style="--d:.16s" data-i18n="support.lead">Un problème, une suggestion ou une caméra à ajouter au catalogue ? Voici comment nous joindre, et comment bien mesurer.</p>
+    </section>
+
+    <section class="container">
+      <div class="contact-card glass glass-strong locus-rim reveal">
+        <span class="rim-glow" aria-hidden="true"></span>
+        <span class="contact-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5.5" width="18" height="13" rx="3"/><path d="m4 7.5 8 5.5 8-5.5"/></svg>
+        </span>
+        <div class="contact-text">
+          <h2 data-i18n="support.contact.title">Contact</h2>
+          <p data-i18n="support.contact.text">Précisez votre modèle d’iPhone et, si possible, la lumière mesurée.</p>
+          <a class="contact-mail" href="mailto:llegoutpro@gmail.com?subject=Kevlux">llegoutpro@gmail.com</a>
+        </div>
+        <div class="contact-actions">
+          <a class="btn btn-primary" href="mailto:llegoutpro@gmail.com?subject=Kevlux" data-i18n="support.contact.write">Écrire un e-mail</a>
+          <button type="button" class="btn glass copy-btn" data-copy="llegoutpro@gmail.com">
+            <span data-copy-label data-i18n="support.contact.copy">Copier l’adresse</span>
+            <span data-copied data-i18n="support.contact.copied">Adresse copiée</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="container block" id="bien-mesurer">
+      <header class="block-head reveal">
+        <h2 data-i18n="support.tips.title">Bien mesurer</h2>
+        <p data-i18n="support.tips.lead">Quatre gestes pour une mesure fiable.</p>
+      </header>
+      <ol class="tips">
+        <li class="tip glass reveal">
+          <span class="tip-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="3.5" width="12" height="17" rx="2"/><path d="M3.5 8V5.5a2 2 0 0 1 2-2M20.5 8V5.5a2 2 0 0 0-2-2M3.5 16v2.5a2 2 0 0 0 2 2M20.5 16v2.5a2 2 0 0 1-2 2"/></svg></span>
+          <div>
+            <h3 data-i18n="support.tips.t1.title">Une référence neutre</h3>
+            <p data-i18n="support.tips.t1.text">Placez une carte grise (ou un mur blanc) à l’endroit du sujet, face à la lumière, et remplissez le réticule.</p>
+          </div>
+        </li>
+        <li class="tip glass reveal" style="--d:.06s">
+          <span class="tip-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="7.5"/><path d="M12 9v4l2.5 2M9.5 2.5h5"/></svg></span>
+          <div>
+            <h3 data-i18n="support.tips.t2.title">Immobile une seconde</h3>
+            <p data-i18n="support.tips.t2.text">Évitez les reflets et votre propre ombre ; gardez l’iPhone immobile environ une seconde après avoir touché « Mesurer ».</p>
+          </div>
+        </li>
+        <li class="tip glass reveal">
+          <span class="tip-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="3.5"/><path d="m3 15.5 5-4.5 4 3.5 3-2.5 6 4.5"/><circle cx="16.5" cy="9.5" r="1.5"/></svg></span>
+          <div>
+            <h3 data-i18n="support.tips.t3.title">Sans référence : le mode Scène</h3>
+            <p data-i18n="support.tips.t3.text">Le mode Scène estime la lumière sur toute l’image : c’est moins sûr, la confiance ne dépasse jamais « moyenne ».</p>
+          </div>
+        </li>
+        <li class="tip glass reveal" style="--d:.06s">
+          <span class="tip-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="6.5" width="13" height="11" rx="2.5"/><path d="m15.5 10.5 6-3v9l-6-3"/></svg></span>
+          <div>
+            <h3 data-i18n="support.tips.t4.title">Votre caméra cible</h3>
+            <p data-i18n="support.tips.t4.text">Choisissez votre caméra : la température est arrondie à son pas et la correction de teinte est indiquée dans son sens.</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <section class="container block" id="questions">
+      <header class="block-head reveal">
+        <h2 data-i18n="support.faq.title">Questions fréquentes</h2>
+      </header>
+      <div class="faq">
+        <details class="glass reveal">
+          <summary data-i18n="support.faq.q1">La mesure est-elle exacte ?</summary>
+          <p class="faq-answer" data-i18n="support.faq.a1">Elle est indicative. L’iPhone n’est pas un colorimètre étalonné ; la marge affichée (±) est la dispersion des images, pas une exactitude garantie. Vérifiez toujours le rendu sur la caméra.</p>
+        </details>
+        <details class="glass reveal">
+          <summary data-i18n="support.faq.q2">Que juge l’indicateur de confiance ?</summary>
+          <p class="faq-answer" data-i18n="support.faq.a2">L’exposition de la zone mesurée (ni écrêtée, ni trop sombre), l’uniformité de sa couleur et la stabilité de la mesure dans le temps.</p>
+        </details>
+        <details class="glass reveal">
+          <summary data-i18n="support.faq.q3">Pourquoi le sens de la teinte est-il parfois « non documenté » ?</summary>
+          <p class="faq-answer" data-i18n="support.faq.a3">Peu de fabricants publient dans quel sens agissent les valeurs de teinte positives. Kevlux indique alors la couleur vers laquelle corriger ; l’outil « Vérifier avec Kevlux… » de la fiche caméra permet de le déterminer une fois pour toutes.</p>
+        </details>
+        <details class="glass reveal">
+          <summary data-i18n="support.faq.q4">Sur quels appareils fonctionne Kevlux ?</summary>
+          <p class="faq-answer" data-i18n="support.faq.a4">Sur iPhone et iPad, avec iOS 26 ou ultérieur. La mesure RAW dépend de l’appareil ; sans elle, Kevlux s’appuie sur ses deux autres méthodes.</p>
+        </details>
+        <details class="glass reveal">
+          <summary data-i18n="support.faq.q5">Kevlux est-elle gratuite ?</summary>
+          <p class="faq-answer" data-i18n="support.faq.a5">Oui : sans publicité, sans achat intégré et sans compte.</p>
+        </details>
+        <details class="glass reveal">
+          <summary data-i18n="support.faq.q6">Mes données sont-elles envoyées quelque part ?</summary>
+          <p class="faq-answer" data-i18n="support.faq.a6">Non. Voir la <a href="confidentialite.html">politique de confidentialité</a>.</p>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer container">
+    <div class="footer-card glass">
+      <div class="footer-brand">
+        <a class="brand" href="index.html"><img src="assets/img/kevlux-mark.svg" alt="" width="34" height="34"><span>Kevlux</span></a>
+        <p data-i18n="footer.tagline">La température et la teinte d’une lumière, pour régler la balance des blancs de n’importe quelle caméra.</p>
+      </div>
+      <nav class="footer-col" aria-labelledby="f-site">
+        <h2 id="f-site" data-i18n="footer.site">Site</h2>
+        <ul>
+          <li><a href="index.html" data-i18n="nav.home">Accueil</a></li>
+          <li><a href="assistance.html" data-i18n="nav.support">Assistance</a></li>
+          <li><a href="confidentialite.html" data-i18n="nav.privacy">Confidentialité</a></li>
+          <li><a href="mentions-legales.html" data-i18n="nav.legal">Mentions légales</a></li>
+        </ul>
+      </nav>
+      <div class="footer-col">
+        <h2 data-i18n="footer.contact">Contact</h2>
+        <ul>
+          <li><a href="mailto:llegoutpro@gmail.com?subject=Kevlux">llegoutpro@gmail.com</a></li>
+        </ul>
+      </div>
+      <p class="footer-legal" data-i18n="footer.legal">© 2026 Louis Legout · Kevlux n’est affilié à aucun fabricant de caméras ou de gélatines cité.</p>
+    </div>
+  </footer>
+</body>
+</html>

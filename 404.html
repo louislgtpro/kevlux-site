@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <base href="/kevlux-site/">
+  <title data-i18n="lost.meta.title">Kevlux — Page introuvable</title>
+  <meta name="description" content="Cette page n’existe pas." data-i18n-attr="content:lost.meta.desc">
+  <meta name="theme-color" content="#07090d">
+  <link rel="icon" href="assets/img/kevlux-mark.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="stylesheet" href="assets/css/base/tokens.css">
+  <link rel="stylesheet" href="assets/css/base/base.css">
+  <link rel="stylesheet" href="assets/css/components/glass.css">
+  <link rel="stylesheet" href="assets/css/components/controls.css">
+  <link rel="stylesheet" href="assets/css/layout/site.css">
+  <link rel="stylesheet" href="assets/css/pages/doc.css">
+  <script src="assets/js/core/lang.js"></script>
+  <script src="assets/js/core/i18n.js" defer></script>
+  <script src="assets/js/ui/glass.js" defer></script>
+  <script src="assets/js/ui/reveal.js" defer></script>
+</head>
+<body data-page="lost">
+  <a class="skip-link" href="#contenu" data-i18n="common.skip">Aller au contenu</a>
+  <div class="ambient" aria-hidden="true"><span class="ambient-warm"></span><span class="ambient-cool"></span><span class="ambient-light"></span></div>
+
+  <header class="site-header">
+    <a class="brand glass glass-press" href="index.html">
+      <img src="assets/img/kevlux-mark.svg" alt="" width="34" height="34">
+      <span>Kevlux</span>
+    </a>
+    <nav class="tabbar glass glass-strong" aria-label="Navigation principale" data-i18n-attr="aria-label:nav.label">
+      <a href="index.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><path d="M4.5 19.5C6.5 12 10.5 7.5 19.5 5.5"/><circle cx="11.6" cy="10.2" r="2.7" fill="currentColor" stroke="none"/></svg>
+        <span data-i18n="nav.home">Accueil</span>
+      </a>
+      <a href="assistance.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="3.4"/><path d="m6 6 3.6 3.6m4.8 4.8L18 18m0-12-3.6 3.6m-4.8 4.8L6 18"/></svg>
+        <span data-i18n="nav.support">Assistance</span>
+      </a>
+      <a href="confidentialite.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5 5 6.2v5.4c0 4.2 2.9 7.6 7 8.9 4.1-1.3 7-4.7 7-8.9V6.2z"/><path d="m9.2 12.1 2 2 3.8-3.9"/></svg>
+        <span data-i18n="nav.privacy">Confidentialité</span>
+      </a>
+    </nav>
+    <div class="lang-switch glass" role="group" aria-label="Langue" data-i18n-attr="aria-label:lang.label">
+      <span class="glass-pill lang-pill" aria-hidden="true"></span>
+      <button type="button" data-lang-btn="fr" lang="fr" aria-label="Français" aria-pressed="true">FR</button>
+      <button type="button" data-lang-btn="en" lang="en" aria-label="English" aria-pressed="false">EN</button>
+      <button type="button" data-lang-btn="es" lang="es" aria-label="Español" aria-pressed="false">ES</button>
+    </div>
+  </header>
+
+  <main id="contenu">
+    <section class="lost container">
+      <p class="lost-figure reveal" aria-hidden="true">404</p>
+      <h1 class="reveal" style="--d:.08s" data-i18n="lost.title">Hors du lieu de Planck.</h1>
+      <p class="page-lead reveal" style="--d:.16s" data-i18n="lost.text">Cette page n’existe pas, ou plus. La lumière est meilleure par ici.</p>
+      <div class="reveal" style="--d:.24s">
+        <a class="btn btn-primary" href="index.html" data-i18n="lost.home">Retour à l’accueil</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer container">
+    <div class="footer-card glass">
+      <div class="footer-brand">
+        <a class="brand" href="index.html"><img src="assets/img/kevlux-mark.svg" alt="" width="34" height="34"><span>Kevlux</span></a>
+        <p data-i18n="footer.tagline">La température et la teinte d’une lumière, pour régler la balance des blancs de n’importe quelle caméra.</p>
+      </div>
+      <nav class="footer-col" aria-labelledby="f-site">
+        <h2 id="f-site" data-i18n="footer.site">Site</h2>
+        <ul>
+          <li><a href="index.html" data-i18n="nav.home">Accueil</a></li>
+          <li><a href="assistance.html" data-i18n="nav.support">Assistance</a></li>
+          <li><a href="confidentialite.html" data-i18n="nav.privacy">Confidentialité</a></li>
+          <li><a href="mentions-legales.html" data-i18n="nav.legal">Mentions légales</a></li>
+        </ul>
+      </nav>
+      <div class="footer-col">
+        <h2 data-i18n="footer.contact">Contact</h2>
+        <ul>
+          <li><a href="mailto:llegoutpro@gmail.com?subject=Kevlux">llegoutpro@gmail.com</a></li>
+        </ul>
+      </div>
+      <p class="footer-legal" data-i18n="footer.legal">© 2026 Louis Legout · Kevlux n’est affilié à aucun fabricant de caméras ou de gélatines cité.</p>
+    </div>
+  </footer>
+</body>
+</html>
