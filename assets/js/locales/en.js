@@ -25,9 +25,9 @@ window.KevluxLocales.en = {
   "home.hero.eyebrow": "White balance, on iPhone and iPad",
   "home.hero.title": "Read the color of <span class=\"locus-text\">light</span>.",
   "home.hero.lead": "Aim at a gray card: Kevlux measures the color temperature and tint of a light, then tells you what to set on your camera.",
-  "home.hero.cta": "Discover the app",
-  "home.hero.support": "Support",
-  "home.hero.meta": "Free · No account, no ads · Coming soon to the App Store",
+  "home.hero.cta": "Download on the App Store",
+  "home.hero.more": "Discover the app",
+  "home.hero.meta": "Free · No account, no ads · iOS 26 or later",
 
   "home.locus.badge": "Interactive preview",
   "home.locus.mired": "mireds",
@@ -96,9 +96,8 @@ window.KevluxLocales.en = {
   "home.honest.title": "The margin shown is a spread, not a promise.",
   "home.honest.text": "The iPhone is not a calibrated colorimeter. Kevlux gives an indicative measurement, combines one second of frames and shows their spread. It never claims false precision: always check the result on the camera.",
 
-  "home.cta.title": "Kevlux is coming soon to the App Store.",
+  "home.cta.title": "Kevlux is available on the App Store.",
   "home.cta.text": "Free, no account, no ads. iPhone and iPad with iOS 26 or later.",
-  "home.cta.mail": "Write to us",
   "home.cta.support": "How to measure",
 
   "support.meta.title": "Kevlux — Support",

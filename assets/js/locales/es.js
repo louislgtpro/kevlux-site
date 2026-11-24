@@ -25,9 +25,9 @@ window.KevluxLocales.es = {
   "home.hero.eyebrow": "Balance de blancos, en iPhone y iPad",
   "home.hero.title": "Lee el color de la <span class=\"locus-text\">luz</span>.",
   "home.hero.lead": "Apunta a una tarjeta gris: Kevlux mide la temperatura y el matiz de una luz, y te dice qué ajustar en tu cámara.",
-  "home.hero.cta": "Descubrir la app",
-  "home.hero.support": "Soporte",
-  "home.hero.meta": "Gratis · Sin cuenta ni publicidad · Muy pronto en el App Store",
+  "home.hero.cta": "Descargar en el App Store",
+  "home.hero.more": "Descubrir la app",
+  "home.hero.meta": "Gratis · Sin cuenta ni publicidad · iOS 26 o posterior",
 
   "home.locus.badge": "Vista previa interactiva",
   "home.locus.mired": "mireds",
@@ -96,9 +96,8 @@ window.KevluxLocales.es = {
   "home.honest.title": "El margen mostrado es una dispersión, no una promesa.",
   "home.honest.text": "El iPhone no es un colorímetro calibrado. Kevlux da una medición orientativa, combina las imágenes de un segundo y muestra su dispersión. Nunca presume de una falsa precisión: comprueba siempre el resultado en la cámara.",
 
-  "home.cta.title": "Kevlux llega muy pronto al App Store.",
+  "home.cta.title": "Kevlux ya está disponible en el App Store.",
   "home.cta.text": "Gratis, sin cuenta ni publicidad. iPhone y iPad con iOS 26 o posterior.",
-  "home.cta.mail": "Escríbenos",
   "home.cta.support": "Cómo medir bien",
 
   "support.meta.title": "Kevlux — Soporte",

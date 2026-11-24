@@ -29,7 +29,7 @@
   <div class="ambient" aria-hidden="true"><span class="ambient-warm"></span><span class="ambient-cool"></span><span class="ambient-light"></span></div>
 
   <header class="site-header">
-    <a class="brand glass glass-press" href="index.html">
+    <a class="brand" href="index.html">
       <img src="assets/img/kevlux-mark.svg" alt="" width="34" height="34">
       <span>Kevlux</span>
     </a>
@@ -48,7 +48,7 @@
         <span data-i18n="nav.privacy">Confidentialité</span>
       </a>
     </nav>
-    <div class="lang-switch glass" role="group" aria-label="Langue" data-i18n-attr="aria-label:lang.label">
+    <div class="lang-switch" role="group" aria-label="Langue" data-i18n-attr="aria-label:lang.label">
       <span class="glass-pill lang-pill" aria-hidden="true"></span>
       <button type="button" data-lang-btn="fr" lang="fr" aria-label="Français" aria-pressed="true">FR</button>
       <button type="button" data-lang-btn="en" lang="en" aria-label="English" aria-pressed="false">EN</button>
@@ -63,13 +63,13 @@
         <h1 class="hero-title reveal" style="--d:.08s" data-i18n="home.hero.title">Lisez la couleur de la <span class="locus-text">lumière</span>.</h1>
         <p class="hero-lead reveal" style="--d:.16s" data-i18n="home.hero.lead">Visez une carte grise : Kevlux mesure la température et la teinte d’une lumière, puis vous dit quoi régler sur votre caméra.</p>
         <div class="hero-actions reveal" style="--d:.24s">
-          <a class="btn btn-primary" href="#apercu">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="6.5"/><path d="M12 2.5v4m0 11v4M2.5 12h4m11 0h4"/></svg>
-            <span data-i18n="home.hero.cta">Découvrir l’app</span>
+          <a class="btn btn-primary" href="https://apps.apple.com/app/kevlux/id6834944271">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19.5h14"/></svg>
+            <span data-i18n="home.hero.cta">Télécharger sur l’App Store</span>
           </a>
-          <a class="btn glass" href="assistance.html" data-i18n="home.hero.support">Assistance</a>
+          <a class="btn glass" href="#apercu" data-i18n="home.hero.more">Découvrir l’app</a>
         </div>
-        <p class="hero-meta reveal" style="--d:.32s" data-i18n="home.hero.meta">Gratuit · Sans compte ni publicité · Bientôt sur l’App Store</p>
+        <p class="hero-meta reveal" style="--d:.32s" data-i18n="home.hero.meta">Gratuit · Sans compte ni publicité · iOS 26 ou ultérieur</p>
       </div>
 
       <div class="instrument glass glass-strong reveal" style="--d:.12s">
@@ -317,8 +317,7 @@
     </section>
 
     <section class="section container" id="honnete">
-      <div class="honest-card glass glass-strong locus-rim reveal">
-        <span class="rim-glow" aria-hidden="true"></span>
+      <div class="honest-card glass glass-strong reveal">
         <span class="kicker" data-i18n="home.honest.kicker">Une mesure honnête</span>
         <p class="honest-figure" aria-hidden="true"><span class="num" data-num="5450" data-unit="K">5 450 K</span> <span class="honest-pm num">± <span data-num="80" data-unit="K">80 K</span></span></p>
         <h2 data-i18n="home.honest.title">La marge affichée est une dispersion, pas une promesse.</h2>
@@ -329,12 +328,12 @@
     <section class="section container">
       <div class="cta reveal">
         <img class="cta-icon" src="assets/img/kevlux-mark.svg" alt="" width="128" height="128" loading="lazy">
-        <h2 data-i18n="home.cta.title">Kevlux arrive bientôt sur l’App Store.</h2>
+        <h2 data-i18n="home.cta.title">Kevlux est disponible sur l’App Store.</h2>
         <p data-i18n="home.cta.text">Gratuit, sans compte ni publicité. iPhone et iPad sous iOS 26 ou ultérieur.</p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="mailto:llegoutpro@gmail.com?subject=Kevlux">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5.5" width="18" height="13" rx="3"/><path d="m4 7.5 8 5.5 8-5.5"/></svg>
-            <span data-i18n="home.cta.mail">Nous écrire</span>
+          <a class="btn btn-primary" href="https://apps.apple.com/app/kevlux/id6834944271">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19.5h14"/></svg>
+            <span data-i18n="home.hero.cta">Télécharger sur l’App Store</span>
           </a>
           <a class="btn glass" href="assistance.html" data-i18n="home.cta.support">Bien mesurer</a>
         </div>
@@ -343,7 +342,7 @@
   </main>
 
   <footer class="site-footer container">
-    <div class="footer-card glass">
+    <div class="footer-card">
       <div class="footer-brand">
         <a class="brand" href="index.html"><img src="assets/img/kevlux-mark.svg" alt="" width="34" height="34"><span>Kevlux</span></a>
         <p data-i18n="footer.tagline">La température et la teinte d’une lumière, pour régler la balance des blancs de n’importe quelle caméra.</p>
@@ -361,6 +360,7 @@
         <h2 data-i18n="footer.contact">Contact</h2>
         <ul>
           <li><a href="mailto:llegoutpro@gmail.com?subject=Kevlux">llegoutpro@gmail.com</a></li>
+          <li><a href="https://apps.apple.com/app/kevlux/id6834944271">App Store</a></li>
         </ul>
       </div>
       <p class="footer-legal" data-i18n="footer.legal">© 2026 Louis Legout · Kevlux n’est affilié à aucun fabricant de caméras ou de gélatines cité.</p>
